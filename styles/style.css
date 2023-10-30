@@ -1,5 +1,284 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  font-family: 'IBM Plex mono', Sans-Serif;
+  background-color: var(--background-color);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
+
+.header {
+  padding: 10px;
+  position: relative;
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: fixed;
+}
+
+@media (width > 375px) {
+  .header {
+    padding: 20px;
+  }
+}
+
+/*уголки и рек*/
+
+.decorated__rec {
+  position: absolute;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  inset-inline-end: 19px;
+}
+
+.decorated__rec::before {
+  content: "REC";
+  color: var(--header-font-shadow);
+  line-height: 24px;
+}
+
+.decorated__rec::after {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 2px var(--header-font-shadow);
+  background: var(--header-font-shadow);
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--header-font-shadow);
+  border-bottom: 1px solid var(--header-font-shadow);
+  left: 10px;
+  bottom: 10px;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-right: 1px solid var(--header-font-shadow);
+  border-top: 1px solid var(--header-font-shadow);
+  right: 10px;
+  top: 10px;
+}
+
+@media (width > 375px) {
+  .decorated__rec {
+    inset-inline-end: 29px;
+  }
+
+  .decorated-zone::after {
+    right: 20px;
+    top: 20px;
+  }
+
+  .decorated-zone::before {
+    left: 20px;
+    bottom: 20px;
+  }
+}
+
+/*ноу фокус хедер*/
+
+.header__name {
+  color: var(--header-font-color);
+  text-shadow: 4px 4px 0px var(--header-font-shadow);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%; 
+  margin-block-start: 70px;
+  margin-block-end: 56px;
+  }
+
+    /*АДАПТИВ СДЕЛАТЬ*/
+
+  @media (width > 375px) {
+    .header__name {
+      margin-block-start: 174px;
+      margin-block-end: 162px;
+    }
+  }
+      /*АДАПТИВ СДЕЛАТЬ*/
+
+  @media (width >= 768) {
+    .header__name {
+      font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+      margin-block-start: 319px;
+      margin-block-end: 114px;
+    }
+  }
+
+/*описаие хедера с бекграундом*/
+
+.header_desc {
+  display: flex;
+  flex-direction: column;
+  color: #000028;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  background-color: var(--header-font-shadow);
+  margin-block-end: 66px;
+}
+
+@media (width > 375px) {
+  .header_desc{
+    /*АДАПТИВ СДЕЛАТЬ*/
+  }
+}
+
+@media (width > 768) {
+  .header_desc {
+        /*АДАПТИВ СДЕЛАТЬ*/
+
+  }
+}
+
+/*список кнопок темы*/
+
+.header__theme-menu {
+  margin-block-start: 65px;
+
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 17px;
+}
+
+@media (width > 768) {
+
+  .header__theme-menu {
+    margin-block-start: 20px;
+  }
+  .header__theme-menu-list {
+  flex-direction: row;
+  justify-content: center;
+  }
+}
+
+.header__theme-menu-button {
+  color: var(--header-font-shadow);
+  text-align: center;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: lowercase;
+  padding: 1px 13px;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--hover-color);
+}
+
+.header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--header-font-shadow);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none ;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--header-font-shadow);
+}
+
+/*main*/
+
+.main {
+  margin-block-start: 30px;
+  padding: 0px 10px;
+}
+
+.section {
+  margin-block-end: 50px;
+}
+
+.section_title,
+.section_item_title,
+.section_item_text,
+.list_title,
+.section_list_title
+{
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130% ;
+  margin-block-end: 20px;
+}
+
+.section_title {
+  color: var(--header-font-shadow);
+}
+
+.section_item_title,
+.section_list_title {
+  color: var(--background-color);
+  background-color: var(--header-font-shadow) ;
+  margin-block-end: 10px;
+}
+
+.section_item_text {
+  color: var(--section-text-color);
+  font-weight: 400;
+  margin-block-end: 20px;
+}
+
+.list_title {
+  color: var(--background-color);
+  background-color: var(--header-font-shadow) ;
+}
+
+.section_list_title {
+  font-weight: 400;
+}
+
+.section_w_images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section__image {
+  /*width: 90%;*/
+}
+
+/*footer*/
+
+.footer {
+  /*padding: 10px;*/
+  position: relative;
+  display: flex; 
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 177.87vw;
+  flex-shrink: 0;
+}
+
+.footer-name
+{
+  color: var(--header-font-color);
+  text-shadow: 4px 4px 0px var(--header-font-shadow);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%; 
+  text-align: center;
+}
+

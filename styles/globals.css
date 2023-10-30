@@ -40,3 +40,16 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+
+ul {
+  list-style: none;
+}
+
+
+button, a {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
