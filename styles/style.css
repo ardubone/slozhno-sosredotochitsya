@@ -3,6 +3,7 @@
 .page {
   font-family: 'IBM Plex mono', Sans-Serif;
   background-color: var(--background-color);
+  background-attachment: fixed;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
@@ -13,7 +14,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
-  background-attachment: fixed;
+  height: 100vh;
 }
 
 @media (width > 375px) {
@@ -133,7 +134,7 @@
 }
 
 @media (width > 375px) {
-  .header_desc{
+  .header_desc {
     /*АДАПТИВ СДЕЛАТЬ*/
   }
 }
@@ -200,7 +201,7 @@
 /*main*/
 
 .main {
-  margin-block-start: 30px;
+  margin-block-start: 40px;
   padding: 0px 10px;
 }
 
@@ -212,8 +213,7 @@
 .section_item_title,
 .section_item_text,
 .list_title,
-.section_list_title
-{
+.section_list_title {
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -267,12 +267,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 177.87vw;
+  height: 100vh;
   flex-shrink: 0;
 }
 
-.footer-name
-{
+.footer-name {
   color: var(--header-font-color);
   text-shadow: 4px 4px 0px var(--header-font-shadow);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -280,6 +279,5 @@
   font-weight: 700;
   line-height: 82.5%; 
   text-align: center;
-  /**/
 }
 
