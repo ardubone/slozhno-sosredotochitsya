@@ -10,18 +10,18 @@
 .header {
   padding: 10px;
   position: relative;
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--backgroung-img);
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
   height: 100vh;
 }
 
-@media (width > 375px) {
+/*@media (width > 375px) {
   .header {
     padding: 20px;
   }
-}
+}*/
 
 /*уголки и рек*/
 
@@ -36,7 +36,7 @@
 
 .decorated__rec::before {
   content: "REC";
-  color: var(--header-font-shadow);
+  color: var(--button-color);
   line-height: 24px;
 }
 
@@ -44,8 +44,8 @@
   content: "";
   display: inline-block;
   border-radius: 50%;
-  box-shadow: 0 0 2px 2px var(--header-font-shadow);
-  background: var(--header-font-shadow);
+  box-shadow: 0 0 2px 2px var(--button-color);
+  background: var(--button-color);
   inline-size: 9px;
   block-size: 9px;
 }
@@ -55,8 +55,8 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  border-left: 1px solid var(--header-font-shadow);
-  border-bottom: 1px solid var(--header-font-shadow);
+  border-left: 1px solid var(--button-color);
+  border-bottom: 1px solid var(--button-color);
   left: 10px;
   bottom: 10px;
 }
@@ -66,13 +66,13 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  border-right: 1px solid var(--header-font-shadow);
-  border-top: 1px solid var(--header-font-shadow);
+  border-right: 1px solid var(--button-color);
+  border-top: 1px solid var(--button-color);
   right: 10px;
   top: 10px;
 }
 
-@media (width > 375px) {
+/*@media (width > 375px) {
   .decorated__rec {
     inset-inline-end: 29px;
   }
@@ -86,7 +86,7 @@
     left: 20px;
     bottom: 20px;
   }
-}
+}*/
 
 /*ноу фокус хедер*/
 
@@ -96,12 +96,12 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-style: normal;
   font-weight: 700;
-  line-height: 82.5%; 
+  line-height: 82.5%;
   margin-block-start: 70px;
   margin-block-end: 56px;
   }
 
-    /*АДАПТИВ СДЕЛАТЬ*/
+    /*АДАПТИВ СДЕЛАТЬ
 
   @media (width > 375px) {
     .header__name {
@@ -109,7 +109,7 @@
       margin-block-end: 162px;
     }
   }
-      /*АДАПТИВ СДЕЛАТЬ*/
+      АДАПТИВ СДЕЛАТЬ
 
   @media (width >= 768) {
     .header__name {
@@ -117,34 +117,34 @@
       margin-block-start: 319px;
       margin-block-end: 114px;
     }
-  }
+  } */
 
 /*описаие хедера с бекграундом*/
 
 .header_desc {
   display: flex;
   flex-direction: column;
-  color: #000028;
+  color: var(--font-wbg-color);
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 700;
   line-height: 130%;
-  background-color: var(--header-font-shadow);
+  background-color: var(--background-text-color);
   margin-block-end: 66px;
 }
-
+/*
 @media (width > 375px) {
   .header_desc {
-    /*АДАПТИВ СДЕЛАТЬ*/
+    АДАПТИВ СДЕЛАТЬ
   }
 }
 
 @media (width > 768) {
   .header_desc {
-        /*АДАПТИВ СДЕЛАТЬ*/
+        АДАПТИВ СДЕЛАТЬ
 
   }
-}
+}*/
 
 /*список кнопок темы*/
 
@@ -160,7 +160,7 @@
   gap: 17px;
 }
 
-@media (width > 768) {
+/*@media (width > 768) {
 
   .header__theme-menu {
     margin-block-start: 20px;
@@ -169,10 +169,10 @@
   flex-direction: row;
   justify-content: center;
   }
-}
+} */
 
 .header__theme-menu-button {
-  color: var(--header-font-shadow);
+  color: var(--button-color);
   text-align: center;
   font-size: 1.125rem;
   font-style: normal;
@@ -187,7 +187,7 @@
 }
 
 .header__theme-menu-button:focus {
-  border-bottom: 1px solid var(--header-font-shadow);
+  border-bottom: 1px solid var(--button-color);
 }
 
 .header__theme-menu-button:focus-visible {
@@ -195,7 +195,7 @@
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--header-font-shadow);
+  outline: 1px solid var(--button-color);
 }
 
 /*main*/
@@ -222,12 +222,12 @@
 }
 
 .section_title {
-  color: var(--header-font-shadow);
+  color: var(--sctiteles-font-color);
 }
 
 .section_item_title,
 .section_list_title {
-  color: var(--background-color);
+  color: var(--titeles-font-color);
   background-color: var(--header-font-shadow) ;
   margin-block-end: 10px;
 }
@@ -239,7 +239,7 @@
 }
 
 .list_title {
-  color: var(--background-color);
+  color: var(--titeles-font-color);
   background-color: var(--header-font-shadow) ;
 }
 
@@ -253,16 +253,16 @@
   gap: 10px;
 }
 
-.section__image {
-  /*width: 90%;*/
-}
+/*.section__image {
+
+}*/
 
 /*footer*/
 
 .footer {
   /*padding: 10px;*/
   position: relative;
-  display: flex; 
+  display: flex;
   padding: 10px;
   flex-direction: column;
   justify-content: center;
@@ -277,7 +277,7 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-style: normal;
   font-weight: 700;
-  line-height: 82.5%; 
+  line-height: 82.5%;
   text-align: center;
 }
 

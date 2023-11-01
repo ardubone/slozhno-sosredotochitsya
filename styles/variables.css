@@ -3,9 +3,21 @@
   и их переопределение под различные устройства
 */
 :root {
-  --header-font-color: #DB00FF;
-  --header-font-shadow: #FF0070;
-  --hover-color: #ff99c6;
+  --h1-font-color: #DB00FF;
+  --accent-color: #FF0070;
   --background-color: #000028;
-  --section-text-color: #F1B2CE;
+  --hover-color: #ff99c6;
+  --font-color: #F1B2CE;
+
+  --header-font-color: var(--h1-font-color);
+  --header-font-shadow: var(--accent-color);
+  --section-text-color: var(--font-color);
+  --button-color: var(--accent-color);
+  --rec-color: var(--accent-color);
+  --background-text-color: var(--accent-color);
+  --font-wbg-color: var(--background-color);
+  --titeles-font-color: var(--background-color);
+  --sctiteles-font-color: var(--accent-color);
+  --shadow-link-color: var(--accent-color);
+  --backgroung-img: url(../images/cover-image-dark.png);
 }
