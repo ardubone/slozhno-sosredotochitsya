@@ -116,7 +116,7 @@
   font-weight: 400;
   line-height: 100%;
   text-transform: lowercase;
-  padding: 1px 13px;
+  padding: 2px 13px;
 }
 
 .header__theme-menu-button:hover {
@@ -171,6 +171,36 @@
     margin-inline-start: 47.40vw;
   }
 }
+
+/*АДАПТИВ ДЕСКТОП*/
+
+@media (width >= 1024px) {
+
+  .header__theme-menu {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .header__name {
+    margin-block-start: 278px;
+    margin-block-end: 114px;
+    margin-inline-start: -20px;
+  }
+
+  .header_desc {
+    margin-inline-start: 493px;
+  }
+
+}
+
+
 
 /*main*/
 
@@ -254,6 +284,34 @@
 
 }
 
+@media (width >= 1024px) {
+
+  .section:nth-child(1),
+  .section:nth-child(3) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 13px;
+    margin-block-end: 60px;
+  }
+
+  .section_title {
+    width: 31vw ;
+  }
+
+  .section:nth-child(2) .article_list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+    }
+
+    .section:nth-child(2) .article_list .section_item {
+      flex: 1 1 0;
+      margin-block-end: -20px;
+    }
+
+}
+
 
 /*АДАПТИВ секции с изображениями планшет*/
 
@@ -312,7 +370,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  
+
   flex-shrink: 0;
 }
 
@@ -324,4 +382,14 @@
   font-weight: 700;
   line-height: 82.5%;
   text-align: center;
+}
+
+
+/*АДАПТИВ Планшет футер*/
+@media (width >= 768px) {
+
+  .footer-name {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+  }
+
 }
