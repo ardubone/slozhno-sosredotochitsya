@@ -257,6 +257,21 @@
   gap: 10px;
 }
 
+.link_text {
+  text-shadow: 1px 1px 0px var(--shadow-link-color);
+}
+
+.link_text:hover {
+  border-bottom: 1px solid var(--section-text-color);
+}
+.link_text:focus {
+  border: 1px solid var(--section-text-color);
+}
+.link_text:focus-visible {
+  outline: none;
+}
+
+
 /*АДАПТИВ секции с текстом планшет*/
 
 @media (width >= 768px) {
