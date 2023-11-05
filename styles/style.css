@@ -14,15 +14,9 @@
 .header {
   padding: 10px;
   position: relative;
-  /*background-image: var(--backgroung-img);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
   height: 100vh;
   min-height: 668px;
 }
-
-
 
 /*уголки и рек*/
 
@@ -34,7 +28,6 @@
   gap: 10px;
   top: 10px;
   right: 19px;
-  /*inset-inline-end: 19px;*/
 }
 
 .decorated__rec::before {
@@ -159,11 +152,6 @@
   margin-block-end: 50px;
 }
 
-/*.section_title,
-.section_item_title,
-.section_item_text,
-.list_title,
-.section_list_title*/
 .text_style {
   font-size: 18px;
   font-style: normal;
@@ -217,9 +205,11 @@
 .link_text:hover {
   border-bottom: 1px solid var(--section-text-color);
 }
+
 .link_text:focus {
   border: 1px solid var(--section-text-color);
 }
+
 .link_text:focus-visible {
   outline: none;
 }
@@ -253,6 +243,13 @@
 @media (width >= 768px) {
   
   /*Планшет Шапка*/
+
+  .header_block {
+    display: grid;
+    height: 100%;
+    grid-template-rows: 1fr min-content 1fr;
+    align-items: center;
+    }
   
   .header {
     padding: 20px;
@@ -273,20 +270,22 @@
     bottom: 20px;
   }
 
-
   .header__theme-menu {
-    margin-block-start: 175px;
+    align-self: baseline;
+    /*margin-block-start: 175px;*/
   }
 
   .header__name {
     font-size: var(--header-size-latop) ;
-    margin-block-start: 174px;
-    margin-block-end: 162px;
+    /*margin-block-start: 174px;
+    margin-block-end: 162px;*/
     margin-inline-start: -20px;
   }
 
   .header_desc {
-    margin-inline-start: 47.40vw;
+    justify-self: end;
+    width: clamp(364px, 47.8vw, 491px) ;
+    /*margin-inline-start: 47.40vw;*/
   }
 
 /*секции с текстом */
@@ -379,15 +378,15 @@
     gap: 10px;
   }
 
-  .header__name {
+  /*.header__name {
     margin-block-start: 278px;
     margin-block-end: 114px;
     margin-inline-start: -20px;
-  }
+  }*/
 
-  .header_desc {
+ /* .header_desc {
     margin-inline-start: 493px;
-  }
+  }*/
   
 /*секции с текстом*/
 
