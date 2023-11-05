@@ -28,7 +28,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 
-@media (prefers-color-scheme: light) {s
+@media (prefers-color-scheme: light) {
   :root {
   --header-font-color: #FFC2E6;
   --accent-color: #FF8DCB;
