@@ -5,13 +5,12 @@
 */
 
 .page.theme_dark {
-  --h1-font-color: #DB00FF;
+  --header-font-color: #DB00FF;
   --accent-color: #FF0070;
   --background-color: #000028;
   --hover-color: #ff99c6;
   --font-color: #F1B2CE;
 
-  --header-font-color: var(--h1-font-color);
   --header-font-shadow: var(--accent-color);
   --section-text-color: var(--font-color);
   --button-color: var(--accent-color);
@@ -22,6 +21,7 @@
   --sctiteles-font-color: var(--accent-color);
   --shadow-link-color: var(--accent-color);
   --backgroung-img: url(../images/cover-image-dark.png);
+  --decorated-color:var(--button-color);
 }
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,

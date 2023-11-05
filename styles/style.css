@@ -1,20 +1,25 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  font-family: 'IBM Plex mono', Sans-Serif;
+  font-family: 'IBM Plex mono', sans-serif;
   background-color: var(--background-color);
   background-attachment: fixed;
+  background-image: var(--backgroung-img);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
 .header {
   padding: 10px;
   position: relative;
-  background-image: var(--backgroung-img);
+  /*background-image: var(--backgroung-img);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100vh;*/
+  min-height: 668px;
 }
 
 
@@ -27,21 +32,29 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  inset-inline-end: 19px;
+  top: 10px;
+  right: 19px;
+  /*inset-inline-end: 19px;*/
 }
 
 .decorated__rec::before {
   content: "REC";
-  color: var(--button-color);
+  color: var(--decorated-color);
   line-height: 24px;
+  text-transform: uppercase;
+  color: #FF0070;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .decorated__rec::after {
   content: "";
-  display: inline-block;
+  display: flex;
   border-radius: 50%;
-  box-shadow: 0 0 2px 2px var(--button-color);
-  background: var(--button-color);
+  box-shadow: 0 0 4px 2px var(--decorated-color);
+  background: var(--decorated-color);
   inline-size: 9px;
   block-size: 9px;
 }
@@ -51,8 +64,8 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  border-left: 1px solid var(--button-color);
-  border-bottom: 1px solid var(--button-color);
+  border-left: 1px solid var(--decorated-color);
+  border-bottom: 1px solid var(--decorated-color);
   left: 10px;
   bottom: 10px;
 }
@@ -62,8 +75,8 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  border-right: 1px solid var(--button-color);
-  border-top: 1px solid var(--button-color);
+  border-right: 1px solid var(--decorated-color);
+  border-top: 1px solid var(--decorated-color);
   right: 10px;
   top: 10px;
 }
@@ -73,7 +86,7 @@
 .header__name {
   color: var(--header-font-color);
   text-shadow: 4px 4px 0px var(--header-font-shadow);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--header-size-mobile);
   font-style: normal;
   font-weight: 700;
   line-height: 82.5%;
@@ -133,74 +146,8 @@
 
 .header__theme-menu-button_active {
   outline: 1px solid var(--button-color);
+  pointer-events: none;
 }
-
-/*АДАПТИВ Планшет Шапка*/
-@media (width >= 768px) {
-  .header {
-    padding: 20px;
-  }
-
-  .decorated__rec {
-    inset-inline-end: 29px;
-  }
-
-  .decorated-zone::after {
-    right: 20px;
-    top: 20px;
-  }
-
-  .decorated-zone::before {
-    left: 20px;
-    bottom: 20px;
-  }
-
-
-  .header__theme-menu {
-    margin-block-start: 175px;
-  }
-
-  .header__name {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
-    margin-block-start: 174px;
-    margin-block-end: 162px;
-    margin-inline-start: -20px;
-  }
-
-  .header_desc {
-    margin-inline-start: 47.40vw;
-  }
-}
-
-/*АДАПТИВ ДЕСКТОП*/
-
-@media (width >= 1024px) {
-
-  .header__theme-menu {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-  }
-
-  .header__theme-menu-list {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-  }
-
-  .header__name {
-    margin-block-start: 278px;
-    margin-block-end: 114px;
-    margin-inline-start: -20px;
-  }
-
-  .header_desc {
-    margin-inline-start: 493px;
-  }
-
-}
-
-
 
 /*main*/
 
@@ -213,11 +160,12 @@
   margin-block-end: 50px;
 }
 
-.section_title,
+/*.section_title,
 .section_item_title,
 .section_item_text,
 .list_title,
-.section_list_title {
+.section_list_title*/
+.text_style {
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -251,10 +199,16 @@
   font-weight: 400;
 }
 
-.section_w_images {
+.section_with_images {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.section__image {
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
 }
 
 .link_text {
@@ -271,10 +225,73 @@
   outline: none;
 }
 
+/*footer*/
 
-/*АДАПТИВ секции с текстом планшет*/
+.footer {
+  position: relative;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*height: 100vh;*/
+  min-height: 668px;
+  flex-shrink: 0;
+}
+
+.footer-name {
+  color: var(--header-font-color);
+  text-shadow: 4px 4px 0px var(--header-font-shadow);
+  font-size: var(--header-size-mobile);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%;
+  text-align: center;
+}
+
+/*АДАПТИВ ПЛАНШЕТ*/
 
 @media (width >= 768px) {
+  
+  /*Планшет Шапка*/
+  
+  .header {
+    padding: 20px;
+  }
+
+  .decorated__rec {
+    top: 20px;
+    right: 29px;
+  }
+
+  .decorated-zone::after {
+    right: 20px;
+    top: 20px;
+  }
+
+  .decorated-zone::before {
+    left: 20px;
+    bottom: 20px;
+  }
+
+
+  .header__theme-menu {
+    margin-block-start: 175px;
+  }
+
+  .header__name {
+    font-size: var(--header-size-latop) ;
+    margin-block-start: 174px;
+    margin-block-end: 162px;
+    margin-inline-start: -20px;
+  }
+
+  .header_desc {
+    margin-inline-start: 47.40vw;
+  }
+
+/*секции с текстом */
+
   .main {
     padding: 0 20px;
     margin-block-start: 60px;
@@ -296,55 +313,16 @@
   .section_title {
     width: clamp(236px, calc(100% / 3.25), 315px) ;
   }
+  
+/*секции с изображениями планшет*/
 
-}
-
-@media (width >= 1024px) {
-
-  .section:nth-child(1),
-  .section:nth-child(3) {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 13px;
-    margin-block-end: 60px;
-  }
-
-  .section_title {
-    width: 31vw ;
-  }
-
-  .section:nth-child(2) .article_list {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    
-    }
-
-    .section:nth-child(2) .article_list .section_item {
-      flex: 1 1 0;
-      margin-block-end: -20px;
-    }
-
-}
-
-
-/*АДАПТИВ секции с изображениями планшет*/
-
-@media (width >= 768px) {
-
-  .section_w_images {
+  .section_with_images {
     margin-top: 20px;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     height: 100vw;
-  }
-
-  .section__image {
-    object-fit: cover;
-    max-width: 100%;
-    height: 100%;
   }
 
   .section__image:nth-child(1) {
@@ -372,39 +350,66 @@
     grid-row: 3 / 4 ;
   }
 
-
-  }
-
-/*footer*/
-
-.footer {
-  position: relative;
-  display: flex;
-  padding: 10px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-
-  flex-shrink: 0;
-}
+/*ФУТЕР*/
 
 .footer-name {
-  color: var(--header-font-color);
-  text-shadow: 4px 4px 0px var(--header-font-shadow);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  font-style: normal;
-  font-weight: 700;
-  line-height: 82.5%;
-  text-align: center;
+  font-size: var(--header-size-latop) ;
 }
 
+}
 
-/*АДАПТИВ Планшет футер*/
-@media (width >= 768px) {
+/*АДАПТИВ ДЕСКТОП*/
 
-  .footer-name {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+@media (width >= 1024px) {
+
+/*ДЕСКТОП ШАПКА*/
+
+  .header__theme-menu {
+    margin: 0;
+    display: flex;
+    justify-content: center;
   }
+
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .header__name {
+    margin-block-start: 278px;
+    margin-block-end: 114px;
+    margin-inline-start: -20px;
+  }
+
+  .header_desc {
+    margin-inline-start: 493px;
+  }
+  
+/*секции с текстом*/
+
+  .section:nth-child(1),
+  .section:nth-child(3) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 13px;
+    margin-block-end: 60px;
+  }
+
+  .section_title {
+    width: 31vw ;
+  }
+
+  .section:nth-child(2) .article_list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+    }
+
+    .section:nth-child(2) .article_list .section_item {
+      flex: 1 1 0;
+      margin-block-end: -20px;
+    }
 
 }

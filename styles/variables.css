@@ -3,13 +3,12 @@
   и их переопределение под различные устройства
 */
 :root {
-  --h1-font-color: #DB00FF;
+  --header-font-color: #DB00FF;
   --accent-color: #FF0070;
   --background-color: #000028;
   --hover-color: #ff99c6;
   --font-color: #F1B2CE;
 
-  --header-font-color: var(--h1-font-color);
   --header-font-shadow: var(--accent-color);
   --section-text-color: var(--font-color);
   --button-color: var(--accent-color);
@@ -20,4 +19,7 @@
   --sctiteles-font-color: var(--accent-color);
   --shadow-link-color: var(--accent-color);
   --backgroung-img: url(../images/cover-image-dark.png);
+  --decorated-color:var(--button-color);
+  --header-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --header-size-latop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 }
