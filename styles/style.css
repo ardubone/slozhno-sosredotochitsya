@@ -86,7 +86,7 @@
   margin-block-end: 56px;
   }
 
-/*описаие хедера с бекграундом*/
+/*описание хедера с бекграундом*/
 
 .header_desc {
   display: flex;
@@ -272,20 +272,16 @@
 
   .header__theme-menu {
     align-self: baseline;
-    /*margin-block-start: 175px;*/
   }
 
   .header__name {
     font-size: var(--header-size-latop) ;
-    /*margin-block-start: 174px;
-    margin-block-end: 162px;*/
     margin-inline-start: -20px;
   }
 
   .header_desc {
     justify-self: end;
     width: clamp(364px, 47.8vw, 491px) ;
-    /*margin-inline-start: 47.40vw;*/
   }
 
 /*секции с текстом */
@@ -300,8 +296,6 @@
     margin-block-end: 60px;
   }
 
-  /*.section:nth-child(1),
-  .section:nth-child(3)*/
   .section_barview {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -378,24 +372,12 @@
     gap: 10px;
   }
 
-  /*.header__name {
-    margin-block-start: 278px;
-    margin-block-end: 114px;
-    margin-inline-start: -20px;
-  }*/
-
- /* .header_desc {
-    margin-inline-start: 493px;
-  }*/
-  
 /*секции с текстом*/
 
 .main {
   margin-block-start: 60px;
 }
 
-  /*.section:nth-child(1),
-  .section:nth-child(3)*/ 
   .section_barview {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -407,7 +389,6 @@
     width: 31vw ;
   }
 
-  /*.section:nth-child(2) .article_list*/
   .row_article_list {
     display: flex;
     flex-direction: row;
@@ -415,7 +396,6 @@
     margin-block-end: 60px;
     }
 
-    /*.section:nth-child(2) .article_list*/ 
     .row_article_list .section_item {
       flex: 1 1 0;
     }

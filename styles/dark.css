@@ -23,6 +23,10 @@
   --backgroung-img: url(../images/cover-image-dark.png);
   --decorated-color:var(--button-color);
 }
+
+.page.theme_dark .decorated__rec {
+  display: flex;
+}
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
