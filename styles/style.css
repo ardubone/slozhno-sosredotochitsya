@@ -17,8 +17,8 @@
   /*background-image: var(--backgroung-img);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;*/
+  background-size: cover; */
+  height: 100vh;
   min-height: 668px;
 }
 
@@ -42,7 +42,6 @@
   color: var(--decorated-color);
   line-height: 24px;
   text-transform: uppercase;
-  color: #FF0070;
   text-align: center;
   font-size: 18px;
   font-style: normal;
@@ -234,7 +233,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /*height: 100vh;*/
+  height: 100vh;
   min-height: 668px;
   flex-shrink: 0;
 }
