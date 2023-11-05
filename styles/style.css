@@ -298,19 +298,23 @@
 
 
   .section {
-    margin-block-end: 80px;
+    margin-block-end: 60px;
   }
 
-  .section:nth-child(1),
-  .section:nth-child(3) {
+  /*.section:nth-child(1),
+  .section:nth-child(3)*/
+  .section_barview {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
-    margin-block-end: 60px;
   }
 
   .section_title {
     width: clamp(236px, calc(100% / 3.25), 315px) ;
+  }
+
+  .row_article_list {
+    margin-block-end: 80px;
   }
   
 /*секции с изображениями планшет*/
@@ -387,8 +391,13 @@
   
 /*секции с текстом*/
 
-  .section:nth-child(1),
-  .section:nth-child(3) {
+.main {
+  margin-block-start: 60px;
+}
+
+  /*.section:nth-child(1),
+  .section:nth-child(3)*/ 
+  .section_barview {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 13px;
@@ -399,16 +408,17 @@
     width: 31vw ;
   }
 
-  .section:nth-child(2) .article_list {
+  /*.section:nth-child(2) .article_list*/
+  .row_article_list {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    
+    margin-block-end: 60px;
     }
 
-    .section:nth-child(2) .article_list .section_item {
+    /*.section:nth-child(2) .article_list*/ 
+    .row_article_list .section_item {
       flex: 1 1 0;
-      margin-block-end: -20px;
     }
 
 }
