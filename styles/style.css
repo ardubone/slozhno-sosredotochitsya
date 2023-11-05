@@ -19,7 +19,7 @@
   background-repeat: no-repeat;
   background-size: cover; */
   height: 100vh;
-  /*min-height: 668px;*/
+  min-height: 668px;
 }
 
 
@@ -117,7 +117,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 17px;
+  gap: 14px;
 }
 
 .header__theme-menu-button {
@@ -234,7 +234,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /*min-height: 668px;*/
+  min-height: 668px;
   flex-shrink: 0;
 }
 
