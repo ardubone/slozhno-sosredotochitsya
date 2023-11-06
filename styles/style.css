@@ -170,6 +170,8 @@
 .section_item_title,
 .section_list_title {
   margin-block-end: 10px;
+  color: var(--titeles-font-color);
+  background-color: var(--background-text-color);
 }
 
 .text_style {
@@ -181,12 +183,6 @@
 
 .section_title {
   color: var(--sctiteles-font-color);
-}
-
-.section_item_title,
-.section_list_title {
-  color: var(--titeles-font-color);
-  background-color: var(--background-text-color) ;
 }
 
 .section_item_text {
