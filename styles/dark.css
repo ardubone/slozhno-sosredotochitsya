@@ -8,7 +8,7 @@
   --header-font-color: #DB00FF;
   --accent-color: #FF0070;
   --background-color: #000028;
-  --hover-color: #ff99c6;
+  --hover-color: rgba(255, 0, 112, 0.4);
   --font-color: #F1B2CE;
 
   --header-font-shadow: var(--accent-color);

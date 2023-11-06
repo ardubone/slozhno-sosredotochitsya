@@ -3,42 +3,49 @@
 .page {
   font-family: 'IBM Plex mono', sans-serif;
   background-color: var(--background-color);
-  background-attachment: fixed;
   background-image: var(--backgroung-img);
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
 .header {
-  padding: 10px;
   position: relative;
   height: 100vh;
   min-height: 668px;
+  padding: 10px;
 }
+
+.header_block {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+  height: 100%;
+  }
 
 /*уголки и рек*/
 
 .decorated__rec {
   position: absolute;
+  top: 10px;
+  right: 19px;
   z-index: 1;
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  top: 10px;
-  right: 19px;
 }
 
 .decorated__rec::before {
   content: "REC";
   color: var(--decorated-color);
-  line-height: 24px;
-  text-transform: uppercase;
-  text-align: center;
+  font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .decorated__rec::after {
@@ -54,36 +61,34 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
+  bottom: 10px;
+  left: 10px;
   width: 25px;
   height: 25px;
-  border-left: 1px solid var(--decorated-color);
   border-bottom: 1px solid var(--decorated-color);
-  left: 10px;
-  bottom: 10px;
+  border-left: 1px solid var(--decorated-color);
 }
 
 .decorated-zone::after {
   content: "";
   position: absolute;
+  top: 10px;
+  right: 10px;
   width: 25px;
   height: 25px;
-  border-right: 1px solid var(--decorated-color);
   border-top: 1px solid var(--decorated-color);
-  right: 10px;
-  top: 10px;
+  border-right: 1px solid var(--decorated-color);
 }
 
 /*ноу фокус хедер*/
 
 .header__name {
   color: var(--header-font-color);
-  text-shadow: 4px 4px 0px var(--header-font-shadow);
+  font-weight: 700;
   font-size: var(--header-size-mobile);
   font-style: normal;
-  font-weight: 700;
   line-height: 82.5%;
-  margin-block-start: 70px;
-  margin-block-end: 56px;
+  text-shadow: 4px 4px 0px var(--header-font-shadow);
   }
 
 /*описание хедера с бекграундом*/
@@ -92,19 +97,14 @@
   display: flex;
   flex-direction: column;
   color: var(--font-wbg-color);
+  font-weight: 700;
   font-size: 1.125rem;
   font-style: normal;
-  font-weight: 700;
   line-height: 130%;
   background-color: var(--background-text-color);
-  margin-block-end: 66px;
 }
 
 /*список кнопок темы*/
-
-.header__theme-menu {
-  margin-block-start: 65px;
-}
 
 .header__theme-menu-list {
   display: flex;
@@ -114,14 +114,14 @@
 }
 
 .header__theme-menu-button {
+  padding: 2px 13px;
   color: var(--button-color);
-  text-align: center;
+  font-weight: 400;
   font-size: 1.125rem;
   font-style: normal;
-  font-weight: 400;
   line-height: 100%;
+  text-align: center;
   text-transform: lowercase;
-  padding: 2px 13px;
 }
 
 .header__theme-menu-button:hover {
@@ -130,6 +130,7 @@
 
 .header__theme-menu-button:focus {
   border-bottom: 1px solid var(--button-color);
+  outline: none ;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -152,12 +153,30 @@
   margin-block-end: 50px;
 }
 
+.section:last-child {
+  margin-block-end: 40px;
+}
+
+.section_title,
+.list_title,
+.section_item {
+  margin-block-end: 20px;
+}
+
+.section_item:last-child {
+  margin-block-end: 0px;
+}
+
+.section_item_title,
+.section_list_title {
+  margin-block-end: 10px;
+}
+
 .text_style {
+  font-weight: 700;
   font-size: 18px;
   font-style: normal;
-  font-weight: 700;
   line-height: 130% ;
-  margin-block-end: 20px;
 }
 
 .section_title {
@@ -167,19 +186,17 @@
 .section_item_title,
 .section_list_title {
   color: var(--titeles-font-color);
-  background-color: var(--header-font-shadow) ;
-  margin-block-end: 10px;
+  background-color: var(--background-text-color) ;
 }
 
 .section_item_text {
   color: var(--section-text-color);
   font-weight: 400;
-  margin-block-end: 20px;
 }
 
 .list_title {
   color: var(--titeles-font-color);
-  background-color: var(--header-font-shadow) ;
+  background-color: var(--background-text-color) ;
 }
 
 .section_list_title {
@@ -193,9 +210,9 @@
 }
 
 .section__image {
-  object-fit: cover;
-  max-width: 100%;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .link_text {
@@ -219,23 +236,21 @@
 .footer {
   position: relative;
   display: flex;
-  padding: 10px;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   min-height: 668px;
-  flex-shrink: 0;
+  padding: 10px;
 }
 
 .footer-name {
   color: var(--header-font-color);
-  text-shadow: 4px 4px 0px var(--header-font-shadow);
+  font-weight: 700;
   font-size: var(--header-size-mobile);
   font-style: normal;
-  font-weight: 700;
   line-height: 82.5%;
   text-align: center;
+  text-shadow: 4px 4px 0px var(--header-font-shadow);
 }
 
 /*АДАПТИВ ПЛАНШЕТ*/
@@ -244,13 +259,6 @@
   
   /*Планшет Шапка*/
 
-  .header_block {
-    display: grid;
-    height: 100%;
-    grid-template-rows: 1fr min-content 1fr;
-    align-items: center;
-    }
-  
   .header {
     padding: 20px;
   }
@@ -261,22 +269,24 @@
   }
 
   .decorated-zone::after {
-    right: 20px;
     top: 20px;
+    right: 20px;
   }
 
   .decorated-zone::before {
-    left: 20px;
     bottom: 20px;
+    left: 20px;
   }
 
   .header__theme-menu {
-    align-self: baseline;
+    align-self: center;
   }
 
   .header__name {
-    font-size: var(--header-size-latop) ;
+    display: flex;
+    align-items: center;
     margin-inline-start: -20px;
+    font-size: var(--header-size-latop) ;
   }
 
   .header_desc {
@@ -287,13 +297,17 @@
 /*секции с текстом */
 
   .main {
-    padding: 0 20px;
     margin-block-start: 60px;
+    padding: 0 20px;
   }
 
 
   .section {
-    margin-block-end: 60px;
+    margin-block-end: 80px;
+  }
+
+  .section:last-child {
+    margin-block-end: 72px;
   }
 
   .section_barview {
@@ -313,12 +327,12 @@
 /*секции с изображениями планшет*/
 
   .section_with_images {
-    margin-top: 20px;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-template-rows: repeat(3, 1fr);
     height: 100vw;
+    margin-top: 20px;
+    grid-gap: 20px;
   }
 
   .section__image:nth-child(1) {
@@ -361,13 +375,13 @@
 /*ДЕСКТОП ШАПКА*/
 
   .header__theme-menu {
-    margin: 0;
     display: flex;
     justify-content: center;
+    align-self: baseline;
+    margin: 0;
   }
 
   .header__theme-menu-list {
-    display: flex;
     flex-direction: row;
     gap: 10px;
   }
@@ -382,7 +396,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 13px;
-    margin-block-end: 60px;
+    margin-block-end: 80px;
   }
 
   .section_title {
@@ -392,12 +406,16 @@
   .row_article_list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
-    margin-block-end: 60px;
     }
 
     .row_article_list .section_item {
-      flex: 1 1 0;
+      flex: 1 1 25vw;
+    }
+
+    .section:last-child {
+      margin-block-end: 83px;
     }
 
 }

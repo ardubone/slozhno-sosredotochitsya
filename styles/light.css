@@ -8,11 +8,11 @@
   --header-font-color: #FFC2E6;
   --accent-color: #FF8DCB;
   --background-color: #FFF1F7;
-  --hover-color: var(--font-color);
+  --hover-color: rgba(50, 49, 45, 0.4);
   --font-color: #353430;
   --titeles-font-color: #353430;
 
-  --header-font-shadow: var(--accent-color);
+  --header-font-shadow: #FF0070;
   --section-text-color: var(--font-color);
   --button-color: var(--font-color);
   --rec-color: var(--font-color);
@@ -33,7 +33,7 @@
   --header-font-color: #FFC2E6;
   --accent-color: #FF8DCB;
   --background-color: #FFF1F7;
-  --hover-color: var(--font-color);
+  --hover-color: rgba(50, 49, 45, 0.4);
   --font-color: #353430;
   --titeles-font-color: #353430;
 
