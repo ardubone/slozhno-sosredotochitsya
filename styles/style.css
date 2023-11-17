@@ -391,7 +391,6 @@
   /*секции с текстом*/
 
   .section_barview {
-    display: grid;
     gap: 13px;
     margin-block-end: 80px;
   }
